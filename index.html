@@ -1,63 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Tree Object</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
   <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="styles/styles.css" />
-  
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Raleway", sans-serif
+    }
+
+    .menu {
+      display: none
+    }
+  </style>
 
 </head>
 
-<body>
- 
+<body class="w3-light-grey w3-content">
 
-    <main id = "main">
+  <h1><b>Structured tree object</b></h1>
 
-      
+  <main id="main">
+    <!-- The Intro Section -->
+    <div id="intro" class="w3-padding-32 w3-white">
+      <div class="w3-row-padding">
+        <div class="w3-col l8 m6">
+          <h1 class="w3-xxxlarge w3-text-green"><b>What is it?</b></h1>
+          <!-- <h1 class="w3-xxxlarge w3-text-green"><b>Craggy Island, Ireland</b></h1>  -->
+          <p><span class="w3-xlarge"></span> The tree structure is a way of representing the hierarchical nature of a
+            structure in a graphical form. The tree is drawn with the root at the top, with multiple branches below.</p>
+          <p><span class="w3-xlarge">Nodes, parents, and children.</span> Each item in the tree is called a 'node' and
+            is assigned a node number. In the example below, the node numbers are shown on the diagram. The parent node
+            is the node immediately above the node in the tree. Each node can have one or more 'child' nodes, for
+            example node 013 in the sample diagram has 3 children - 0131, 0132 and 0133.</p>
+          <p><span class="w3-xlarge">Use cases.</span> There are countless use cases that crop up when a hierarchical
+            structure is needed. Examples could be the structure of books in a library (fiction and non-fiction; then
+            romance, thrillers, sci-fi under fiction etc); or college courses (arts, sciences, engineering); branches in a code repositoy; or world - continents - countries - cities etc.</p>
 
-      <div> 
-        <img src = "images/tree-2027899_1280.png" style="width:20%; float:right; margin:10px">
-        <h1>Structured tree object</h1>
 
-       <p> The  tree structure is a way of representing the hierarchical nature of a  structure in a graphical form.   The tree is drawn with the root at the top, with multiple branches below.  </p>
-       <p> Each item in the tree is called a 'node' and is assigned a node number.  In the example below, the node numbers are shown on the diagram.  The parent node is the node immediately above the node in the tree. Each node can have one or more 'child' nodes, for example node 013 in the diagram has 3 children - 0131, 0132 and 0133.</p>
-       <p>In this simple example, if you mouse over any node in the diagram, it will highlight all the 'ancestors' of that node all  the way up the tree to the root node.  Give  it a try!</p>
-        
-      </div>
-      
-
-        <div id = "grid-container-demo" class = "grid-container2">
-           
-           
         </div>
-      
+        <div class="w3-col l4 m6">
+          <a href="https://jackmcginley.github.io/Lyre-Festival/" target="_blank">
+            <img src="images/tree-2027899_1280.png" class="w3-image w3-right w3-round-large w3-hide-small" width="335"
+              height="471" title="tree image">
+          </a>
 
-      <h2>Now build your own tree.</h2>
-      <p>You can construct a tree by adding nodes in the hierarchy below the root node</p>
-      <p>To get started, decide what you would like the tree to represent.  Examples could be the structure of books in a library (fiction and non-fiction; then romance, thrillers, sci-fi under fiction etc);  or college courses (arts, sciences, engineering with further branches below each category), or world - continents - countries - cities etc.</p>
-      <p>In the field below, enter a simple heading that will become the root of your tree (such as 'Library' or 'Courses' as in the examples above).</p>
-      <p>After creating the  root, you can click on any node to add a child node.</p>
-      <input id = "usertree" type="text">
-      <button id = "createTreeBtn"> Create Tree</button>
-      
-      <div id = "grid-container-user" class = "grid-container-user">
-
-
-
-
+        </div>
       </div>
+    </div>
+
+    <div class="w3-container w3-black w3-padding-24 " id="menu">
+      <div class="w3-content">
+
+        <h1 class="w3-center w3-xxlarge" >Examples</h1>
+        <div class="w3-row w3-center w3-border w3-border-dark-grey">
+          <a href="javascript:void(0)" onclick="openMenu(event, 'sample');" id="myLink">
+            <div class="w3-col s6 tablink w3-padding-large w3-hover-teal">Sample</div>
+          </a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'new');">
+            <div class="w3-col s6 tablink w3-padding-large w3-hover-teal">Build your own</div>
+          </a>
+
+        </div>
+
+        <div id="sample" class="w3-container treetab w3-padding-32 w3-white">
+          <p><span class="w3-xlarge w3-tag w3-brown w3-round">Mouseover</span> In this simple example, if you mouse
+            over any node in the diagram, it will highlight all the 'ancestors' of that node all the way up the tree to
+            the root node. Give it a try!</p>
+
+          <div id="grid-container-demo" class="grid-container2 w3-pale-green"></div>
+        </div>
+
+        <div id="new" class="w3-container treetab w3-padding-32 w3-white">
+
+          <h2>Now build your own tree.</h2>
+          <p>You can construct a tree by adding nodes in the hierarchy below the root node</p>
+          <p>To get started, decide what you would like the tree to represent. Examples could be the structure of books
+            in a library (fiction and non-fiction; then romance, thrillers, sci-fi under fiction etc); or college
+            courses (arts, sciences, engineering with further branches below each category).</p>
+          <p>In the field below, enter a simple heading that will become the root of your tree (such as 'Library' or
+            'College' in the examples above).</p>
+          <p>After creating the root, you can click on any node to add child nodes, separated by / character if adding more than one</p><br>
+
+          <div class="w3-container">
+
+            <label class="w3-text-teal" style = "display:block"><b>Name of tree</b></label>
+            <input id="usertree" type="text" class="w3-input w3-border w3-round" style="width:50%; display:inline ">
+            <button id="createTreeBtn" class="w3-button w3-teal w3-round-large" style = "display:inline"> Create Tree</button>
+          </div>
+          <div id="grid-container-user" class="grid-container-user w3-pale-green"></div>
 
 
-    </main>
+        </div>
 
-    <footer>
+        
 
 
-    </footer>
+        </div>
+        </div>
+
+
+  </main>
+
+  <footer>
+
+
+  </footer>
 </body>
+<script>
+  // Tabbed Menu
+  function openMenu(evt, menuName) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("treetab");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" w3-teal", "");
+    }
+    document.getElementById(menuName).style.display = "block";
+    evt.currentTarget.firstElementChild.className += " w3-teal";
+  }
+  document.getElementById("myLink").click();
+</script>
 <script src="scripts/scripts.js"></script>
-</html>
 
+</html>

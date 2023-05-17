@@ -1,7 +1,4 @@
-p {
-    /* margin: 10px 10px; */
-    /* padding: 10px; */
-}
+
 .grid-container{
     clear: both;
     display: grid;
@@ -57,11 +54,11 @@ p {
     grid-template-columns: auto auto auto auto auto auto auto auto;
     gap: 5px;
     /* background-color: #98caf3; */
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
     padding: 5px;
     border: 2px;
     border-style: solid;
-    border-color: blue;
+    border-color: black;
     border-radius: 8px;
     justify-content: space-around;
     
@@ -69,12 +66,12 @@ p {
 .grid-container-user {
     display: grid;
     gap: 5px;
-    background-color:beige ;
+    /* background-color:beige ; */
     margin: 10px 0 0 0;
     padding: 5px;
     border: 2px;
     border-style: solid;
-    border-color: blue;
+    border-color: black;
     border-radius: 8px;
     justify-content: space-around;
     

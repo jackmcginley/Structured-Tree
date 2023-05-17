@@ -302,13 +302,13 @@ class Tree {
             gridCell.setAttribute("style", `grid-area: ${rowStart} / ${colStart} / ${rowEnd} / ${colEnd}`);
             gridCell.setAttribute("data-nodeid", `${nodeObjectId}`);
             if(!userTree){
-                gridCell.innerHTML = `<span class = 'grid-span'>${nodeObjectId}</span>`;
+                gridCell.innerHTML = `<span class = 'grid-span w3-brown'>${nodeObjectId}</span>`;
             }else{
                 gridCell.classList.add("userdiv");
                 if(level===0){
-                    gridCell.innerHTML = `<span class = 'grid-span'>${this.nodeObjectArray[level].text}</span>`;
+                    gridCell.innerHTML = `<span class = 'grid-span w3-brown'>${this.nodeObjectArray[level].text}</span>`;
                 }else
-                gridCell.innerHTML = `<span class = 'grid-span'>${this.nodeObjectArray[level][i].text}</span>`;
+                gridCell.innerHTML = `<span class = 'grid-span w3-brown'>${this.nodeObjectArray[level][i].text}</span>`;
             }
             gridContainer.appendChild(gridCell);
             // block out the columns below any leaf by removing that columns from the usable columns array.
